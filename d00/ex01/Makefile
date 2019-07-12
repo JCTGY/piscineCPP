@@ -17,7 +17,8 @@ CFLAG = -Wall -Wextra -Werror
 
 INC = -Iincludes
 
-SRC =  megaphone.cpp
+SRC :=  ClassContact.cpp \
+	phonebook.cpp
 
 
 all: $(NAME)

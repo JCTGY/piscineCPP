@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASS_CONTACT_H
-#define CLASS_CONTACT_H
+#ifndef CLASSCONTACT_H
+#define CLASSCONTACT_H
 
 # include <string>
 # include <iostream>
@@ -31,27 +31,30 @@ class	Contact
 		std::string underwear_color;
 		std::string darkest_secret;
 	public:
-		void add_first_name(void);
-		void add_last_name(void);
-		void add_nickname(void);
-		void add_login(void);
-		void add_postal_address(void);
-		void add_email_address(void);
-		void add_phone_number(void);
-		void add_birthday_date(void);
-		void add_favorite_meal(void);
-		void add_underwear_color(void);
-		void add_darkest_secret(void);
-		std::string add_first_name(void);
-		std::string add_last_name(void);
-		std::string add_nickname(void);
-		std::string add_login(void);
-		std::string add_postal_address(void);
-		std::string add_email_address(void);
-		std::string add_phone_number(void);
-		std::string add_birthday_date(void);
-		std::string add_favorite_meal(void);
-		std::string add_underwear_color(void);
-		std::string add_darkest_secret(void);
+                Contact(void);
+                ~Contact(void);
+		void add_first_name(std::string str);
+		void add_last_name(std::string str);
+		void add_nickname(std::string str);
+		void add_login(std::string str);
+		void add_postal_address(std::string str);
+		void add_email_address(std::string str);
+		void add_phone_number(std::string str);
+		void add_birthday_date(std::string str);
+		void add_favorite_meal(std::string str);
+		void add_underwear_color(std::string str);
+		void add_darkest_secret(std::string str);
+		std::string get_first_name(void);
+		std::string get_last_name(void);
+		std::string get_nickname(void);
+		std::string get_login(void);
+		std::string get_postal_address(void);
+		std::string get_email_address(void);
+		std::string get_phone_number(void);
+		std::string get_birthday_date(void);
+		std::string get_favorite_meal(void);
+		std::string get_underwear_color(void);
+		std::string get_darkest_secret(void);
 }
 
+#endif
