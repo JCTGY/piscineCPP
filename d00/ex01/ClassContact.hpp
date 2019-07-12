@@ -6,15 +6,16 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:46:20 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/07/11 11:12:25 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/07/12 09:59:45 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSCONTACT_H
-#define CLASSCONTACT_H
+#ifndef CLASSCONTACT_HPP
+# define CLASSCONTACT_HPP
 
 # include <string>
 # include <iostream>
+# include <fstream>
 
 class	Contact
 {
@@ -31,8 +32,8 @@ class	Contact
 		std::string underwear_color;
 		std::string darkest_secret;
 	public:
-                Contact(void);
-                ~Contact(void);
+       	Contact(void);
+        ~Contact(void);
 		void add_first_name(std::string str);
 		void add_last_name(std::string str);
 		void add_nickname(std::string str);
@@ -55,6 +56,6 @@ class	Contact
 		std::string get_favorite_meal(void);
 		std::string get_underwear_color(void);
 		std::string get_darkest_secret(void);
-}
+};
 
 #endif
