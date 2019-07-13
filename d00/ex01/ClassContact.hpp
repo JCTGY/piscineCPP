@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:46:20 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/07/12 09:59:45 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/07/13 11:15:59 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <string>
 # include <iostream>
 # include <fstream>
+# include <iomanip>
+# include <ctype.h>
 
 class	Contact
 {
@@ -58,4 +60,7 @@ class	Contact
 		std::string get_darkest_secret(void);
 };
 
+void	display_contact(Contact contact[8], int num_contact);
+void	display_index(Contact contact[8], int num_contact);
+Contact	add_contact(void);
 #endif
