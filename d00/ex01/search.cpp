@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 10:44:14 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/07/13 11:17:56 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/07/13 11:36:48 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ void	display_contact(Contact contact[8], int num_contact){
 	std::getline(std::cin, temp);
 	//if (!temp)
 	//	return ;
-	if (temp.size() != 1 ||	isdigit(temp[0])){
-		std::cout << "invalid index, please check again" << std::endl;
-		return ;
-	}
+	//if (temp.size() != 1 ||	isdigit(temp[0])){
+	//	std::cout << "invalid index, please check again" << std::endl;
+	//	return ;
+	//}
 	i = std::stoi(temp);
 	if (i < num_contact && i > 0){
 		std::cout << "first_name: " << contact[i].get_first_name() << std::endl;
