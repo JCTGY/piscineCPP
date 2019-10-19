@@ -44,14 +44,14 @@ void	display_contact(Contact contact[8], int num_contact){
 	std::string temp;
 	std::cout << "Please enter the index of the contact:" << std::endl;
 	std::getline(std::cin, temp);
-	//if (!temp)
-	//	return ;
-	//if (temp.size() != 1 ||	isdigit(temp[0])){
-	//	std::cout << "invalid index, please check again" << std::endl;
-	//	return ;
-	//}
+	if (temp.empty())
+		return ;
+	if (temp.length() != 1 || !isdigit(temp[0])){
+		std::cout << "invalid index, please check again" << std::endl;
+		return ;
+	}
 	i = std::stoi(temp);
-	if (i < num_contact && i > 0){
+	if (i < num_contact && i >= 0){
 		std::cout << "first_name: " << contact[i].get_first_name() << std::endl;
 		std::cout << "last_name: " << contact[i].get_first_name() << std::endl;
 		std::cout << "nickname: " << contact[i].get_first_name() << std::endl;
