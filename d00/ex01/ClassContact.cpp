@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 08:23:39 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/07/12 09:29:19 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/21 14:05:56 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,10 @@ void    Contact::add_login(std::string str){
 
 void    Contact::add_postal_address(std::string str){
     postal_address = str;
+};
+
+void    Contact::add_email_address(std::string str){
+    email_address = str;
 };
 
 void    Contact::add_phone_number(std::string str){
@@ -91,6 +95,10 @@ std::string     Contact::get_phone_number(void){
 
 std::string     Contact::get_birthday_date(void){
     return this->birthday_date;
+};
+
+std::string     Contact::get_favorite_meal(void){
+    return this->favorite_meal;
 };
 
 std::string     Contact::get_underwear_color(void){

@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 14:32:52 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/21 16:04:38 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/21 20:54:35 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/21 22:46:54 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#ifndef ZOMBIEHORDE_HPP
+# define ZOMBIEHORDE_HPP
 
-#include <iostream>
-#include <string>
-
-class Pony 
+class ZombieHorde
 {
 	private:
-		std::string ponyName;
-		std::string isPony;
-	
+		std::string zombieNmae;
+		Zombie *arrayZombies;
 	public:
-		Pony(void);
-		~Pony(void);
-		void addPonyName(std::string str);
-		void addIsPony(void);
-		std::string getPonyName(void);
-		std::string getIsPony(void);
+		ZombieHorde(int numZombies);
+		~ZombieHorde(void);
+		std::string randomNames(int index);
 };
 
 #endif

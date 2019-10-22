@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ex01.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 14:32:52 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/21 16:04:38 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/21 16:22:03 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/21 16:24:20 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-
-#include <iostream>
 #include <string>
+#include <iostream>
 
-class Pony 
+void memoryLeak() {
+	std::string*	panthere = new std::string("String panthere");
+	std::cout << *panthere << std::endl;
+	delete panthere;
+}
+
+int main(void)
 {
-	private:
-		std::string ponyName;
-		std::string isPony;
-	
-	public:
-		Pony(void);
-		~Pony(void);
-		void addPonyName(std::string str);
-		void addIsPony(void);
-		std::string getPonyName(void);
-		std::string getIsPony(void);
-};
-
-#endif
+	memoryLeak();
+	return 0;
+}

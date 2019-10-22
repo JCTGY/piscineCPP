@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 10:44:14 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/07/13 11:36:48 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/21 14:00:58 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,18 @@ void	display_contact(Contact contact[8], int num_contact){
 	i = std::stoi(temp);
 	if (i < num_contact && i >= 0){
 		std::cout << "first_name: " << contact[i].get_first_name() << std::endl;
-		std::cout << "last_name: " << contact[i].get_first_name() << std::endl;
-		std::cout << "nickname: " << contact[i].get_first_name() << std::endl;
-		std::cout << "login: " << contact[i].get_first_name() << std::endl;
-		std::cout << "postal_address: " << contact[i].get_first_name() << std::endl;
-		std::cout << "email_address: " << contact[i].get_first_name() << std::endl;
-		std::cout << "phone_number: " << contact[i].get_first_name() << std::endl;
-		std::cout << "birthday_date: " << contact[i].get_first_name() << std::endl;
-		std::cout << "underwear_color: " << contact[i].get_first_name() << std::endl;
-		std::cout << "darkest_secret: " << contact[i].get_first_name() << std::endl;
+		std::cout << "last_name: " << contact[i].get_last_name() << std::endl;
+		std::cout << "nickname: " << contact[i].get_nickname() << std::endl;
+		std::cout << "login: " << contact[i].get_login() << std::endl;
+		std::cout << "postal_address: " << contact[i].get_postal_address() << std::endl;
+		std::cout << "email_address: " << contact[i].get_email_address() << std::endl;
+		std::cout << "phone_number: " << contact[i].get_phone_number() << std::endl;
+		std::cout << "birthday_date: " << contact[i].get_birthday_date() << std::endl;
+		std::cout << "favorite_meal: " << contact[i].get_favorite_meal() << std::endl;
+		std::cout << "underwear_color: " << contact[i].get_underwear_color() << std::endl;
+		std::cout << "darkest_secret: " << contact[i].get_darkest_secret() << std::endl;
+	}
+	else {
+		std::cout << "index out of bounds" << std::endl;
 	}
 }

@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 14:32:52 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/21 16:04:38 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/21 16:51:49 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/21 19:02:46 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#include "Zombie.hpp"
 
-#include <iostream>
-#include <string>
+Zombie::Zombie(std::string type, std::string name){
+	this->type = type;
+	this->name = name;
+	this->announce();
+	std::cout << this->name << "is comming" << std::endl;
+}
 
-class Pony 
-{
-	private:
-		std::string ponyName;
-		std::string isPony;
-	
-	public:
-		Pony(void);
-		~Pony(void);
-		void addPonyName(std::string str);
-		void addIsPony(void);
-		std::string getPonyName(void);
-		std::string getIsPony(void);
-};
+Zombie::~Zombie(void){
+	std::cout << this->name << "is dieing" << std::endl;
+}
 
-#endif
+void Zombie::announce(void){
+	std::cout << "<" << this->type << "> " << this->name << "...." << std::endl;
+}

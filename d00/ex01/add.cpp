@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 10:45:01 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/07/13 09:37:57 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/21 14:06:35 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ Contact	add_contact(void){
 	std::cout << "postal_address: ";
 	std::getline(std::cin, str);
 	new_contact.add_postal_address(str);
+
+	std::cout << "email_address: ";
+	std::getline(std::cin, str);
+	new_contact.add_email_address(str);
 
 	std::cout << "phone_number: ";
 	std::getline(std::cin, str);

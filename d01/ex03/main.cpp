@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 14:32:52 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/21 16:04:38 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/21 17:01:22 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/21 22:49:04 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-
-#include <iostream>
+#include "Zombie.hpp"
+#include "Zombiehorde.hpp"
 #include <string>
+#include <iostream>
 
-class Pony 
-{
-	private:
-		std::string ponyName;
-		std::string isPony;
-	
-	public:
-		Pony(void);
-		~Pony(void);
-		void addPonyName(std::string str);
-		void addIsPony(void);
-		std::string getPonyName(void);
-		std::string getIsPony(void);
-};
+int main(void) {
 
-#endif
+	ZombieHorde zombieHorde = ZombieHorde(50);
+	return 0;
+}

@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 14:32:52 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/21 16:04:38 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/21 16:38:17 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/21 22:22:35 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-#include <iostream>
 #include <string>
+#include <iostream>
 
-class Pony 
+class Zombie 
 {
 	private:
-		std::string ponyName;
-		std::string isPony;
-	
+		std::string type;
+		std::string name;
 	public:
-		Pony(void);
-		~Pony(void);
-		void addPonyName(std::string str);
-		void addIsPony(void);
-		std::string getPonyName(void);
-		std::string getIsPony(void);
+		Zombie(std::string type, std::string name);
+		Zombie(void);
+		~Zombie(void);
+		void setZombieNameType(std::string name, std::string type);
+		void announce(void);
 };
 
 #endif

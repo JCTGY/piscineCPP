@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 14:32:52 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/21 16:04:38 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/21 17:11:05 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/21 18:57:48 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#ifndef ZOMBIEEVENT_HPP
+# define ZOMBIEEVENT_HPP
 
-#include <iostream>
-#include <string>
+#include "Zombie.hpp"
 
-class Pony 
-{
+class ZombieEvent {
 	private:
-		std::string ponyName;
-		std::string isPony;
-	
+		std::string zombieType;
 	public:
-		Pony(void);
-		~Pony(void);
-		void addPonyName(std::string str);
-		void addIsPony(void);
-		std::string getPonyName(void);
-		std::string getIsPony(void);
+		ZombieEvent(void);
+		~ZombieEvent(void);
+		void setZombieType(std::string type);
+		Zombie *newZombie(std::string name);
+		void randomChump(std::string name);
 };
 
 #endif
+
