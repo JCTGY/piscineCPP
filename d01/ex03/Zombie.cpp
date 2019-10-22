@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 16:51:49 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/21 22:25:42 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/22 08:28:28 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 Zombie::Zombie(std::string type, std::string name){
 	this->type = type;
 	this->name = name;
-	this->announce();
 	std::cout << this->name << "is comming" << std::endl;
 }
 

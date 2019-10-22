@@ -6,20 +6,21 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 17:01:22 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/21 19:13:02 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/22 08:33:33 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 #include "ZombieEvent.hpp"
-#include <ctime>
-#include <cstdlib>
+#include <random>
 
 std::string randomName(void){
 
 	std::string arrayTypes[5] = {"Monster", "Badshit", "Lovely", "Cute", "Crazy"};
-	srand(time(0));
-	int index = rand() % 5;
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_int_distribution<> uid(0, 1000);
+	int index = uid(gen) % 5;
 	return arrayTypes[index];
 }
 
