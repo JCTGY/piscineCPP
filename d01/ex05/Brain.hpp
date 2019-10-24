@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 08:38:47 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:40:28 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/22 15:48:50 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/22 16:29:29 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 #include <string>
 #include <iostream>
 
-int main(void)
-{
-	std::string theString = "HI THIS IS BRAIN";
-	std::string *pointer = &theString;
-	std::string &refer = theString;
+class Brain {
 
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
+	public:
+		Brain(void);
+		~Brain(void);
+		std::string identify(void);
+};
 
-	return 0;
-}
+#endif

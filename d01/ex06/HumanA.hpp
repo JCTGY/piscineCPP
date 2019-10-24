@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 08:38:47 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:40:28 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/22 20:03:36 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/23 19:15:59 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
+
+#include "Weapon.hpp"
 #include <string>
 #include <iostream>
 
-int main(void)
+class HumanA
 {
-	std::string theString = "HI THIS IS BRAIN";
-	std::string *pointer = &theString;
-	std::string &refer = theString;
+	private:
+		std::string name;
+		Weapon & weapon;
 
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
+	public:
+		HumanA(std::string name, Weapon & weapon);
+		~HumanA(void);
+		void attack(void);
+};
 
-	return 0;
-}
+#endif

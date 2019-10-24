@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 08:38:47 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:40:28 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/22 20:44:39 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/22 21:37:03 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANB_HPP
+
+#include "Weapon.hpp"
 #include <string>
 #include <iostream>
 
-int main(void)
+class HumanB 
 {
-	std::string theString = "HI THIS IS BRAIN";
-	std::string *pointer = &theString;
-	std::string &refer = theString;
+	private:
+		std::string _name;
+		Weapon *_weapon;
 
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
+	public:
+		HumanB(void);
+		HumanB(std::string name);
+		~HumanB(void);
+		void attack(void);
+		void setWeapon(Weapon &weapon); // set reference to the pointer
+};
 
-	return 0;
-}
+#endif

@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 08:38:47 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:40:28 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/23 13:28:41 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/23 13:39:54 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iostream>
+#include "Human.hpp"
 
 int main(void)
 {
-	std::string theString = "HI THIS IS BRAIN";
-	std::string *pointer = &theString;
-	std::string &refer = theString;
-
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
+	Human human = Human();
+	human.action("meleeAttack", "Nooby");
+	human.action("rangedAttack", "Lotak");
+	human.action("intimidatingShout", "Zukashi");
+	human.action("retardedAttack", "Nobal");
 
 	return 0;
 }

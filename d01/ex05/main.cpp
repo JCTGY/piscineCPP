@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 08:38:47 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:40:28 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/22 16:00:45 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/22 19:24:46 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Brain.hpp"
+#include "Human.hpp"
 #include <string>
 #include <iostream>
 
-int main(void)
+int main(void) 
 {
-	std::string theString = "HI THIS IS BRAIN";
-	std::string *pointer = &theString;
-	std::string &refer = theString;
-
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
-
+	Human human = Human();
+	std::cout << human.identify() << std::endl;
+	std::cout << human.getBrain()->identify() << std::endl;
 	return 0;
 }

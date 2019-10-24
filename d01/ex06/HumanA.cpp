@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 08:38:47 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:40:28 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/22 20:08:41 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/23 19:16:36 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iostream>
+#include "Weapon.hpp"
+#include "HumanA.hpp"
 
-int main(void)
-{
-	std::string theString = "HI THIS IS BRAIN";
-	std::string *pointer = &theString;
-	std::string &refer = theString;
+HumanA::HumanA(std::string name, Weapon & weapon) :  name(name), weapon(weapon)  {
 
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
+	std::cout << "HumanA get weapon" << std::endl;
+}
 
-	return 0;
+HumanA::~HumanA(void) {
+
+	std::cout << "Human is dead" << std::endl;
+	return ;
+}
+
+void HumanA::attack(void) {
+
+	std::cout << name << "attacks with his " << weapon.getType() << std::endl;
+	return ;
 }

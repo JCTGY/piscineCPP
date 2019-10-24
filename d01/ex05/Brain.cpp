@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 08:38:47 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:40:28 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/22 15:53:05 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/22 19:47:46 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Brain.hpp"
+#include <sstream>
 #include <string>
-#include <iostream>
 
-int main(void)
-{
-	std::string theString = "HI THIS IS BRAIN";
-	std::string *pointer = &theString;
-	std::string &refer = theString;
+Brain::Brain(void) {
 
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
+	std::cout << "create a brain" << std::endl;
+	return ;
+}
 
-	return 0;
+Brain::~Brain(void) {
+
+	std::cout << "burn the brain" << std::endl;
+	return ;
+}
+
+std::string Brain::identify(void) {
+
+	std::stringstream ss;
+	ss << (const void *)this;
+	std::string name = ss.str();
+	return name;
 }

@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.class.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 08:38:47 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:40:28 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/23 14:13:17 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/23 16:33:30 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#ifndef FIXED_CLASS_HPP
+# define FIXED_CLASS_HPP
+
 #include <iostream>
 
-int main(void)
-{
-	std::string theString = "HI THIS IS BRAIN";
-	std::string *pointer = &theString;
-	std::string &refer = theString;
+class Fixed {
 
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
+	private:
+		int _fixValue;
+		const static int _fixBits;
+	public:
+		Fixed(void);
+		Fixed(const Fixed &old);
+		Fixed & operator = (const Fixed &old);
+		~Fixed(void);
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
+};
 
-	return 0;
-}
+#endif			

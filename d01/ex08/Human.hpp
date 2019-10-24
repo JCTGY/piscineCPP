@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   Human.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 08:38:47 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:40:28 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/23 10:18:00 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/23 10:25:11 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HUMAN_HPP
+# define HUMAN_HPP
 
 #include <string>
 #include <iostream>
 
-int main(void)
-{
-	std::string theString = "HI THIS IS BRAIN";
-	std::string *pointer = &theString;
-	std::string &refer = theString;
+class Human {
+	private:
+		void meleeAttack(std::string const & target);
+		void rangedAttack(std::string const & target);
+		void intimidatingShout(std::string const & target);
+	public:
+		void action(std::string const & action_name, std::string const & target);
+};
 
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
-
-	return 0;
-}
+#endif
