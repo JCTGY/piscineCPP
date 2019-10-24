@@ -6,13 +6,13 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 16:08:29 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 20:32:04 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/23 23:04:39 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.class.hpp"
 
-int _fixBits = 8;
+const int Fixed::_fixBits = 8;
 
 Fixed::Fixed(void) : _fixValue(0) {
 
@@ -25,15 +25,13 @@ Fixed::Fixed(const Fixed &old){
 	*this = old;
 }
 
-Fixed::Fixed(const int fixValue) {
-	
-	_fixValue.setRawBits(fixValue << _fixBits);
+Fixed::Fixed(const int fixValue) : _fixValue(fixValue << _fixBits) {
+
 	std::cout << "Int Construtor" << std::endl;
 }
 
-Fixed::Fixed(const float fixValue) { 
-	
-	_fixValue.setRawBits(fixValue * (1 << _fixBits));
+Fixed::Fixed(const float fixValue) : _fixValue(roundf(fixValue * (1 << _fixBits))) {
+
 	std::cout << "Float Constructor" << std::endl;
 }
 
@@ -57,7 +55,7 @@ int Fixed::getRawBits(void) const {
 void Fixed::setRawBits(int const raw) {
 
 	_fixValue = raw;
-	std::cout << "Set _fixValue to " << raw << std::endl;
+	std::cout << "Set _fixValue"<< std::endl;
 }
 
 float Fixed::toFloat(void) const { 
