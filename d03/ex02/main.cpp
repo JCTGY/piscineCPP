@@ -5,15 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 23:42:24 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 13:10:27 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/25 11:36:10 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/25 13:49:51 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
+#include <iostream>
+#include <string>
 
-int main(void)
+int main(void) 
 {
+	ClapTrap clap = ClapTrap("lol");
+	clap.meleeAttack("lolals");
+	std::cout << "----------------------------------------------" << std::endl;
+
 	FragTrap Bob = FragTrap("Bob");
 
 	Bob.meleeAttack("slime");
@@ -26,5 +34,21 @@ int main(void)
 	Bob.vaulthunter_dot_exe("skag");
 	Bob.vaulthunter_dot_exe("skag");
 	Bob.vaulthunter_dot_exe("skag");
+	std::cout << "------------------------------------------------" << std::endl;
+
+	ScavTrap Dob = ScavTrap("lol");
+
+	Dob.meleeAttack("slime");
+	Dob.rangedAttack("slime");
+	Dob.challengeNewcomer("skag");
+	Dob.beRepaired(99);
+	Dob.takeDamage(30);
+	Dob.beRepaired(99);
+	Dob.challengeNewcomer("skag");
+	Dob.challengeNewcomer("skag");
+	Dob.challengeNewcomer("skag");
+	Dob.challengeNewcomer("skag");
+	return 0;
+
 	return 0;
 }

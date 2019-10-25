@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 20:38:50 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 12:58:11 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/25 10:54:16 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/25 13:40:16 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <string>
 #include <iostream>
 #include <ctime>
 
-class FragTrap {
+class ClapTrap {
 
-	private:
+	protected:
 		std::string _name;
 		unsigned int _hitPoint;
 		unsigned int _maxHitPoint;
@@ -31,11 +31,11 @@ class FragTrap {
 		unsigned int _armorReduction;
 	public:
 		// Default Canonical Class
-		FragTrap(void);
-		FragTrap(std::string const & name);
-		FragTrap(const FragTrap & copy);
-		FragTrap &operator = (const FragTrap & inputClass);
-		~FragTrap(void);
+		ClapTrap(void);
+		ClapTrap(std::string const & name);
+		ClapTrap(const ClapTrap & copy);
+		ClapTrap &operator = (const ClapTrap & inputClass);
+		~ClapTrap(void);
 
 		// Get function
 		std::string getName(void) const;
@@ -53,13 +53,6 @@ class FragTrap {
 		void meleeAttack(std::string const & target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		void vaulthunter_dot_exe(std::string const & target);
-
-		void lazyAttack(std::string const & target);
-		void wowoAttack(std::string const & target);
-		void latataAttack(std::string const & target);
-		void hahaAttack(std::string const & target);
-		void doneAttack(std::string const & target);
 };
 
 #endif
