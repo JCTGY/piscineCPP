@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 16:08:29 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 23:04:39 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/24 08:51:24 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ Fixed::Fixed(void) : _fixValue(0) {
 	std::cout << "Set fixValue to defaulf" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &old){
+Fixed::Fixed(const Fixed &inputClass){
 
 	std::cout << "Copy another objec" << std::endl;
-	*this = old;
+	*this = inputClass;
 }
 
 Fixed::Fixed(const int fixValue) : _fixValue(fixValue << _fixBits) {
@@ -35,10 +35,10 @@ Fixed::Fixed(const float fixValue) : _fixValue(roundf(fixValue * (1 << _fixBits)
 	std::cout << "Float Constructor" << std::endl;
 }
 
-Fixed & Fixed::operator = (const Fixed &old) {
+Fixed & Fixed::operator = (const Fixed &inputClass) {
 
 	std::cout << "Assignment operator procesee" << std::endl;
-	this->_fixValue = old.getRawBits();
+	this->_fixValue = inputClass.getRawBits();
 	return *this;
 }
 
@@ -70,8 +70,8 @@ int Fixed::toInt(void) const {
 	return (_fixValue >> _fixBits);
 }
 
-std::ostream &operator << (std::ostream &out, Fixed const &old) {
+std::ostream & operator << (std::ostream &outClass, Fixed const &inputClass) {
 
-	out << old.toFloat();
-	return out;
+	outClass << inputClass.toFloat();
+	return outClass;
 }

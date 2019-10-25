@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.class.hpp                                    :+:      :+:    :+:   */
+/*   InputParse.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 14:13:17 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/24 08:53:30 by jchiang-         ###   ########.fr       */
+/*   Created: 2019/10/24 13:55:28 by jchiang-          #+#    #+#             */
+/*   Updated: 2019/10/24 16:29:39 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_CLASS_HPP
-# define FIXED_CLASS_HPP
+#ifndef EVALEXP_HPP
+# define EVALEXP_HPP
 
-#include <iostream>
+#include "Fixed.class.hpp"
 
-class Fixed {
+int inputChecker(char *pos);
+Fixed parseBracket(char **pos);
+Fixed parseProduct(char **pos);
+Fixed parseSum(char **pos);
 
-	private:
-		int _fixValue;
-		const static int _fixBits;
-	public:
-		Fixed(void);
-		Fixed(const Fixed &inputClass);
-		Fixed & operator = (const Fixed &inputClass);
-		~Fixed(void);
-		int getRawBits(void) const;
-		void setRawBits(int const raw);
-};
-
-#endif			
+#endif

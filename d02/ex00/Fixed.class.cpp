@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 16:08:29 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 19:11:37 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/24 08:52:56 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ Fixed::Fixed(void) : _fixValue(0) {
 	std::cout << "Set fixValue to defaulf" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &old) {
+Fixed::Fixed(const Fixed &inputClass) {
 
 	std::cout << "Copy another objec" << std::endl;
-	this->_fixValue = old.getRawBits();
+	this->_fixValue = inputClass.getRawBits();
 }
 
-Fixed & Fixed::operator = (const Fixed &old) {
+Fixed & Fixed::operator = (const Fixed &inputClass) {
 
 	std::cout << "Assignment operator procesee" << std::endl;
-	this->_fixValue = old.getRawBits();
+	this->_fixValue = inputClass.getRawBits();
 	return *this;
 }
 
