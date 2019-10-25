@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 16:08:29 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/24 19:50:02 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/24 22:22:29 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ Fixed Fixed::operator * (const Fixed &inputClass) const {
 }
 
 Fixed Fixed::operator - (const Fixed &inputClass) const {
-	return Fixed(this->toFloat() - inputClass.toFloat());
+	return this->toFloat() - inputClass.toFloat();
 }
 
 Fixed Fixed::operator / (const Fixed &inputClass) const {
