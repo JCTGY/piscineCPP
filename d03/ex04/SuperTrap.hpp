@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 15:46:48 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 17:25:21 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/25 21:37:16 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <iostream>
 #include <ctime>
 
-class SuperTrap : public FragTrap, public NinjaTrap {
+class SuperTrap : public NinjaTrap, public FragTrap {
 
 	private:
 		std::string _name;

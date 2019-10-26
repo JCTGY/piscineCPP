@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 15:14:24 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 16:31:04 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/25 21:48:17 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 
 class NinjaTrap : public virtual ClapTrap {
 
+	private:
+		unsigned int _energy;
+		unsigned int _maxEnergy;
 	public:
 		// Default Canonical Class
 		NinjaTrap(void);
@@ -28,6 +31,10 @@ class NinjaTrap : public virtual ClapTrap {
 		NinjaTrap &operator = (const NinjaTrap & inputClass);
 		~NinjaTrap(void);
 
+		// get function
+		unsigned int getEnergy(void) const;
+		unsigned int getMaxEnergy(void) const;
+		
 		// member function
 		void rangedAttack(std::string const & target);
 		void meleeAttack(std::string const & target);

@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 15:56:25 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 17:24:59 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/25 22:11:55 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 SuperTrap::SuperTrap(void) { }
 
-SuperTrap::SuperTrap(std::string name) : FragTrap(name), NinjaTrap(name) {
+SuperTrap::SuperTrap(std::string name) : NinjaTrap(name), FragTrap(name) {
 
 	_name           = name;
 	_hitPoint       = FragTrap::getHitPoint();
@@ -31,7 +31,7 @@ SuperTrap::SuperTrap(std::string name) : FragTrap(name), NinjaTrap(name) {
 	std::cout << "Set SuperTrap: " << _name << std::endl;
 }
 
-SuperTrap::SuperTrap(const SuperTrap & copy) : FragTrap(copy), NinjaTrap(copy) {
+SuperTrap::SuperTrap(const SuperTrap & copy) : NinjaTrap(copy), FragTrap(copy) {
 
 	std::cout << "[SuperTrap] ";
 	std::cout << "Copy new objet" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 15:12:25 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 15:32:17 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/25 21:49:58 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,11 @@ NinjaTrap::~NinjaTrap(void) {
 	std::cout << "[NinjaTrap] ";
 	std::cout << "Feel so good xdd. Seee you next time " << _name << std::endl;
 }
+
+// Get function
+
+unsigned int NinjaTrap::getEnergy(void) const { return _energy; }
+unsigned int NinjaTrap::getMaxEnergy(void) const { return _maxEnergy; }
 
 // member function
 void NinjaTrap::rangedAttack(std::string const & target) {
