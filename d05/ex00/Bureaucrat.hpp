@@ -19,6 +19,8 @@
 class Bureaucrat {
 
 	private:
+		const int _maxGrade;
+		const int _minGrade;
 		const std::string _name;
 		int _grade;
 	
@@ -44,4 +46,24 @@ class Bureaucrat {
 				GradeTooHighException(const & GradeTooHighException);
 				~GradeTooHighException(void);
 				GradeTooHighException &operator = (const GradeTooHighException & inputClass);
+
+				virtual const char * what() const throw();
+		};
+
+		class GradeTooLowException : std::exception {
+			public:
+				GradeTooLowException(void);
+				GradeTooLowException(const & GradeTooLowException);
+				~GradeTooLowException(void);
+				GradeTooLowException &operator = (const GradeTooLowException & inputClass);
+
+				virtual const char * what() const throw();
+		};
+};
+
+std::ostream &operator << (std::ostream &output, Bureaucrat &inputClass);  
+
+#endif
+
+
 
