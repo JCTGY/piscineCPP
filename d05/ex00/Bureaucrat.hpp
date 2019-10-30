@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 10:52:22 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/28 23:47:55 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:42:33 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 
 #include <string>
 #include <iostream>
+#include <stdexcept>
 
 class Bureaucrat {
 
 	private:
-		const int _maxGrade;
-		const int _minGrade;
+		static const int _maxGrade;
+		static const int _minGrade;
 		const std::string _name;
 		int _grade;
 	
@@ -40,28 +41,28 @@ class Bureaucrat {
 		void decreatmentGrade(void);
 
 		// nested class
-		class GradeTooHighException : std::exception {
+		class GradeTooHighException : public std::exception {
 			public:
 				GradeTooHighException(void);
-				GradeTooHighException(const & GradeTooHighException);
-				~GradeTooHighException(void);
+				GradeTooHighException(const GradeTooHighException & copy);
+				~GradeTooHighException(void) throw();
 				GradeTooHighException &operator = (const GradeTooHighException & inputClass);
 
 				virtual const char * what() const throw();
 		};
 
-		class GradeTooLowException : std::exception {
+		class GradeTooLowException : public std::exception {
 			public:
 				GradeTooLowException(void);
-				GradeTooLowException(const & GradeTooLowException);
-				~GradeTooLowException(void);
+				GradeTooLowException(const GradeTooLowException & copy);
+				~GradeTooLowException(void) throw();
 				GradeTooLowException &operator = (const GradeTooLowException & inputClass);
 
 				virtual const char * what() const throw();
 		};
 };
 
-std::ostream &operator << (std::ostream &output, Bureaucrat &inputClass);  
+std::ostream &operator << (std::ostream &output, Bureaucrat const &inputClass);  
 
 #endif
 
