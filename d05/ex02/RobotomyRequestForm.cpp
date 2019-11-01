@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 23:15:16 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/29 23:15:40 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/29 23:26:58 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,24 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 		if (executor.getGrade() <= 145) {
 
 			std::string filePath = this->getTargetPath();
-			filePath += "/ShrubberyCreation";
+			filePath += "/RobotomyRequestForm";
 			std::ofstream output(filePath);
 			if (output.fail() || !output.is_open()){
 				std::cout << "outpu file faile" << std::endl;
 			} else {
-			std::cout << "RobotomyRequestForm Tree" << std::endl;
+						output << "       |    | " << std::endl
+	   			<< "	T/ / T||/  /_/___/_" << std::endl
+ << "       TT   |/ T/"<< std::endl
+  << " _T__T_T   |  /_____/_"<< std::endl
+  << "        T  | /          /"<< std::endl
+ << "__ _-----`  |{,-----------~"<< std::endl
+ <<  "         T }{"<< std::endl
+ << "           }{{"<< std::endl
+  << "          }}{"<< std::endl
+ << "           {{}"<< std::endl
+  << "    , -=-~{ .-^- _"<< std::endl
+ <<" ejm        `}"<< std::endl
+  << "           {"<< std::endl;
 			output.close();
 			}
 		} else {

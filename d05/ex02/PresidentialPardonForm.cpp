@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 23:17:29 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/29 23:17:52 by jchiang-         ###   ########.fr       */
+/*   Updated: 2019/10/29 23:27:13 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,24 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const {
 		if (executor.getGrade() <= 145) {
 
 			std::string filePath = this->getTargetPath();
-			filePath += "/ShrubberyCreation";
+			filePath += "/PresidentialPardonForm";
 			std::ofstream output(filePath);
 			if (output.fail() || !output.is_open()){
 				std::cout << "outpu file faile" << std::endl;
 			} else {
-			std::cout << "PresidentialPardonForm Tree" << std::endl;
+			output  << "       |    | " << std::endl
+	   			<< "	x/ / x||/  /_/___/_" << std::endl
+ << "       xx   |/ x/"<< std::endl
+  << " _x__x_x   |  /_____/_"<< std::endl
+  << "        x | /          /"<< std::endl
+ << "__ _-----`  |{,-----------~"<< std::endl
+ <<  "         x }{"<< std::endl
+ << "           }{{"<< std::endl
+  << "          }}{"<< std::endl
+ << "           {{}"<< std::endl
+  << "    , -=-~{ .-^- _"<< std::endl
+ <<" ejm        `}"<< std::endl
+  << "           {"<< std::endl;
 			output.close();
 			}
 		} else {
