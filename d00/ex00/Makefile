@@ -6,14 +6,14 @@
 #    By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/07 16:00:18 by jchiang-          #+#    #+#              #
-#    Updated: 2019/07/07 16:00:24 by jchiang-         ###   ########.fr        #
+#    Updated: 2020/01/10 14:49:17 by jchiang-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
 
 
-CFLAG = -Wall -Wextra -Werror
+CFLAG = -Wall -Wextra -Werror -std=c++98
 
 INC = -Iincludes
 
