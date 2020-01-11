@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombiehorde.hpp"
+#include "ZombieHorde.hpp"
 #include <ctime>
 #include <cstdlib>
 #include <random>

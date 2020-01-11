@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include "Zombiehorde.hpp"
+#include "ZombieHorde.hpp"
 #include <string>
 #include <iostream>
 
