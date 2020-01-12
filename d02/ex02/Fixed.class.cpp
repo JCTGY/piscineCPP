@@ -90,11 +90,15 @@ Fixed& Fixed::operator -- (void) {
 }
 
 Fixed Fixed::operator ++ (int) {
-	return Fixed(_fixValue++);
+	Fixed tmp = *this;
+	_fixValue++;
+	return tmp;
 }
 
 Fixed Fixed::operator -- (int) {
-	return Fixed(_fixValue--);
+	Fixed tmp = *this;
+	_fixValue--;
+	return tmp;
 }
 
 // member function
