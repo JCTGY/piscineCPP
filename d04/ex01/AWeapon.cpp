@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 17:36:19 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 21:38:10 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/13 20:51:48 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ AWeapon::AWeapon(const AWeapon & copy) {
 
 AWeapon &AWeapon::operator = (const AWeapon & inputClass) {
 
+	if (this == &inputClass)
+		return *this;
 	_name = inputClass.getName();
 	_damagePoint = inputClass.getDamagePoint();
 	_actionCost = inputClass.getActionCost();

@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 17:48:21 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 23:28:55 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/13 21:20:56 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,15 @@
 
 int main(void)
 {
-	PlasmaRifle tam = PlasmaRifle("pad", 20, 35);
+	
+	PlasmaRifle tam =  PlasmaRifle();
 	std::cout << "Name: " << tam.getName() << std::endl;
 	std::cout << "Name: " << tam.getDamagePoint() << std::endl;
 	std::cout << "Name: " << tam.getActionCost() << std::endl;
 	tam.attack();
 
 	std::cout << "---------------------------------------------------------" << std::endl;
-	PowerFist gam = PowerFist("dgo", 20, 35);
+	PowerFist gam = PowerFist();
 	std::cout << "Name: " << gam.getName() << std::endl;
 	std::cout << "Name: " << gam.getDamagePoint() << std::endl;
 	std::cout << "Name: " << gam.getActionCost() << std::endl;

@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 22:31:42 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 23:37:58 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/13 21:14:16 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void Character::attack(Enemy *enemy) {
 			this->_actionPoint >= this->_aweapon->getActionCost()) {
 		std::cout << _name << " attacks " << enemy->getType() 
 			<< " with a " << _aweapon->getName() << std::endl;
+		_aweapon->attack();
 		enemy->takeDamage(this->_aweapon->getDamagePoint());
 		if (enemy->getHitPoint() <= 0)
 			delete enemy;

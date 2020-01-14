@@ -6,17 +6,14 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 18:06:34 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 21:43:18 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/13 21:10:09 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PowerFist.hpp"
 
 // Default Cannonoical
-PowerFist::PowerFist(void) { }
-
-PowerFist::PowerFist(std::string name, int damagePoint, int actionCost)
-	: AWeapon(name, damagePoint, actionCost) {
+PowerFist::PowerFist(void) : AWeapon("Power Fist", 50, 8) {
 
 		std::cout << "A " << AWeapon::getName() << " is created" << std::endl;
 }

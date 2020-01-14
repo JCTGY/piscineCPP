@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 17:52:13 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 18:04:26 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/13 21:10:22 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class PlasmaRifle : public AWeapon {
 	public:
 		// Default Canonoical Class
 		PlasmaRifle(void);
-		PlasmaRifle(std::string name, int damagePonit, int actionCost);
 		PlasmaRifle(const PlasmaRifle & copy);
 		PlasmaRifle &operator = (const PlasmaRifle &inputClass);
 		~PlasmaRifle(void);

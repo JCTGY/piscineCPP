@@ -6,17 +6,14 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 17:56:05 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 21:44:01 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/13 21:06:44 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PlasmaRifle.hpp"
 
 // Default Cannonoical
-PlasmaRifle::PlasmaRifle(void) { }
-
-PlasmaRifle::PlasmaRifle(std::string name, int damagePoint, int actionCost)
-	: AWeapon(name, damagePoint, actionCost) {
+PlasmaRifle::PlasmaRifle(void) : AWeapon("Plasma Rifle", 21, 5) {
 
 		std::cout << "A " << AWeapon::getName() << " is created" << std::endl;
 }
