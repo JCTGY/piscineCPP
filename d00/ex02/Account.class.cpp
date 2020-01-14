@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 09:56:53 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/10 15:25:18 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/13 16:44:44 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <ctime>
 #include <iomanip>
+
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
