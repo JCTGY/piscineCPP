@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Logger.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/13 16:12:22 by jchiang-          #+#    #+#             */
+/*   Updated: 2020/01/13 16:20:08 by jchiang-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Logger.hpp"
 
 Logger::Logger(void) {
     this->_logFile = "LoggerFile";
+	std::cout << "Create default file" << std::endl;
 }
 
 Logger::Logger(std::string loggerFile) : _logFile(loggerFile) {
@@ -19,8 +31,12 @@ void Logger::logToConsole(std::string const & message) {
 }
 
 void Logger::logToFile(std::string const & message) {
-    std::ofstream outPutFile(_logFile);
-    outPutFile << message;
+    std::ofstream outPutFile(_logFile, std::ios_base::app);
+	if (!outPutFile) {
+		std::cout << "Error: open / create file fail" << std::endl;
+		return ;
+	}
+    outPutFile << message << std::endl;
 }
 
 std::string Logger::makeLogEntry(std::string message) const {
@@ -53,12 +69,12 @@ void Logger::log(std::string const & dest, std::string const & message) {
     
     	for (int i = 0; i < 2; i++) {
 		if (destName[i] == dest) {
-			(this->*(log[i]))(message);
+			(this->*(log[i]))(newMessage);
 			destMatch = true;
 		}
 	}
 
 	if (destMatch == false) {
-		std::cout << "Where is ur ATTACK to " << message << "???" << std::endl;
+		std::cout << "dest property: logToConsole / logToFile" << std::endl;
 	}
 }
