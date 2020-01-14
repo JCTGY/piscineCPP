@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 22:03:44 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/14 11:12:35 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/14 14:33:44 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 # define SQUAD_HPP
 
 #include "ISquad.hpp"
+#include "ISpaceMarine.hpp"
 
 typedef struct s_node {
-	void *content;
+	ISpaceMarine *marine;
 	s_node *next;
 }t_node;
 
@@ -29,7 +30,7 @@ typedef struct s_squad {
 class Squad : public ISquad 
 {
 	private:
-		t_squad *squadArmy;
+		t_squad *_squadArmy;
 	public:
 		Squad(void);
 		Squad(const Squad & copy);
@@ -37,7 +38,7 @@ class Squad : public ISquad
 		~Squad(void);
 		int getCount(void) const;
 		ISpaceMarine *getUnit(int) const;
-		int push(ISpaceMarine);
+		int push(ISpaceMarine *marine);
 };
 
 #endif
