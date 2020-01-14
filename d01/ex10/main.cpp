@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 18:38:06 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/13 19:49:55 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/13 19:56:44 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void inputToFile(int start, int indexCombine, char *file, char **files) {
 		} else
 			std::cout << file << " :No such file or directory" << std::endl;
 	}
+	newFile.close();
 }
 
 void checkFiles(int start, int numOfFiles, char **files) {
@@ -61,9 +62,7 @@ void checkFiles(int start, int numOfFiles, char **files) {
 		}		
 	} else if (numOfFiles + 1 > indexCombine) {
 		inputToFile(start, indexCombine, files[indexCombine + 1], files);
-		checkFiles(indexCombine + 2, numOfFiles, files);
 	}
-	std::cout << "indexCombine = " << indexCombine << std::endl;
 }
 
 int main(int argc, char **argv)
@@ -75,6 +74,5 @@ int main(int argc, char **argv)
 	} else {
 		std::cout << "Invalid argument" << std::endl;
 	}
-
 	return 0;
 }
