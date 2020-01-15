@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 21:55:49 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/22 22:35:17 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/14 22:30:08 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ int main(int argc, char **argv)
 		std::string name = argv[1];
 		std::string oldString = argv[2];
 		std::string newString = argv[3];
+		if (oldString == "") {
+			std::cout << "Please Enter valid input" << std::endl;
+			return -1;
+		}
 		std::ifstream opFile(name);
 		if (!opFile) {
 			std::cout << "file input is not corrent" << std::endl;
@@ -33,8 +37,10 @@ int main(int argc, char **argv)
 		}
 		std::string saveString;
 		while (std::getline(opFile, saveString)) {
-			for (size_t p = saveString.find(oldString); p != std::string::npos; p = saveString.find(oldString, p)) {
+			size_t p = saveString.find(oldString); 
+			while (p != std::string::npos) {
 				 saveString.replace(saveString.find(oldString), oldString.length(), newString);
+				 p = saveString.find(oldString, p + newString.size());
 			 }
 			 saveFile << saveString << std::endl;
 		}

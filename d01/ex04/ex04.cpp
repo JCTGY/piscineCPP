@@ -19,8 +19,8 @@ int main(void)
 	std::string *pointer = &theString;
 	std::string &refer = theString;
 
-	std::cout << "pointer" << *pointer << std::endl;
-	std::cout << "refer" << refer << std::endl;
+	std::cout << "pointer: " << *pointer << std::endl;
+	std::cout << "refer: " << refer << std::endl;
 
 	return 0;
 }

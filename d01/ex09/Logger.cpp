@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 16:12:22 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/13 16:20:08 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/14 22:56:48 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void Logger::log(std::string const & dest, std::string const & message) {
 
     std::string newMessage = makeLogEntry(message);
     bool destMatch = false;
-	void (Logger::*log[2]) (std::string const & message) = {
+	void (Logger::*logto[2]) (std::string const & message) = {
 		&Logger::logToConsole,
 		&Logger::logToFile,
 	};
@@ -69,7 +69,7 @@ void Logger::log(std::string const & dest, std::string const & message) {
     
     	for (int i = 0; i < 2; i++) {
 		if (destName[i] == dest) {
-			(this->*(log[i]))(newMessage);
+			(this->*(logto[i]))(newMessage);
 			destMatch = true;
 		}
 	}

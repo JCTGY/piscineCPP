@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 20:13:50 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/22 21:39:41 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/14 22:21:56 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(void)
 	}
 	// Human will die if does not pass in Weapon
 	{
-		Weapon        club = Weapon("crude spiked club");
+		Weapon club = Weapon("crude spiked club");
 		HumanB jim("Jim");
 		jim.setWeapon(club);
 		jim.attack();

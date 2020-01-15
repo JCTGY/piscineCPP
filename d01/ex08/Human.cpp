@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 10:22:46 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/23 13:48:06 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/14 22:53:51 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void Human::intimidatingShout(std::string const & target) {
 void Human::action(std::string const & action_name, std::string const & target) {
 
 	bool attackMatch = false;
-	void (Human::*action[3]) (std::string const & target) = {
+	void (Human::*act[3]) (std::string const & target) = {
 		&Human::meleeAttack,
 		&Human::rangedAttack,
 		&Human::intimidatingShout
@@ -44,7 +44,7 @@ void Human::action(std::string const & action_name, std::string const & target) 
 
 	for (int i = 0; i < 3; i++) {
 		if (actionNames[i] == action_name) {
-			(this->*(action[i]))(target);
+			(this->*(act[i]))(target);
 			attackMatch = true;
 		}
 	}
