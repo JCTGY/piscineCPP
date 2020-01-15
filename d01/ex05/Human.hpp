@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 18:44:01 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/22 19:20:15 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/14 20:04:20 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 class Human 
 {
 	private:
-		Brain *brain;
+		Brain _brain;
 
 	public:
 		Human(void);
 		~Human(void);
-		Brain *getBrain(void);
+		Brain & getBrain(void);
 		std::string identify(void);
 };
 

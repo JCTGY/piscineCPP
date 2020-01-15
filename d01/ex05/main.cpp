@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 16:00:45 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/22 19:24:46 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/14 19:24:15 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int main(void)
 {
 	Human human = Human();
 	std::cout << human.identify() << std::endl;
-	std::cout << human.getBrain()->identify() << std::endl;
+	std::cout << human.getBrain().identify() << std::endl;
 	return 0;
 }
