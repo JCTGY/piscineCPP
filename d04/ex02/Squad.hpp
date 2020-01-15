@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 22:03:44 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/14 14:33:44 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/14 18:32:12 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ typedef struct s_node {
 typedef struct s_squad {
 	s_node *last;
 	s_node *first;
-	int num;
 }t_squad;
 
 class Squad : public ISquad 
 {
 	private:
 		t_squad *_squadArmy;
+		int _numOfSquad;
 	public:
 		Squad(void);
 		Squad(const Squad & copy);
