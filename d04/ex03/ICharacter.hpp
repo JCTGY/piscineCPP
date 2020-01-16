@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 19:45:25 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/16 11:00:11 by jchiang-         ###   ########.fr       */
+/*   Created: 2020/01/16 11:00:38 by jchiang-          #+#    #+#             */
+/*   Updated: 2020/01/16 11:27:31 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
+#include <iostream>
+#include <string>
 #include "AMateria.hpp"
-#include "ICharacter.hpp"
 
-class ice : public AMateria
+class ICharacter
 {
-	private:
-
 	public:
-		Ice(void);
-		Ice(const Ice & copy);
-		Ice &operator = (const Ice & inputClass);
-		~Ice(void);
-
-		AMateria * clone(void) const;
-		void use(ICharacter & targer);
+		virtual ~ICharacter(void);
+		virtual std::string const & getName(void) const = 0;
+		virtual void equip(AMateria * m) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter & target) = 0;
 };
 
 #endif
