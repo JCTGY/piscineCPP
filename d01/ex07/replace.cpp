@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 21:55:49 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/15 18:36:35 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/15 18:53:38 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ int main(int argc, char **argv)
 			 }
 			 saveFile << saveString << std::endl;
 		}
+		opFile.close();
+		saveFile.close();
 	} else {
 		std::cout << "Usage FileName, oldString, newString" << std::endl;
 		return -3;
