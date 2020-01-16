@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 21:55:49 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/14 22:30:08 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/15 18:36:35 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 		while (std::getline(opFile, saveString)) {
 			size_t p = saveString.find(oldString); 
 			while (p != std::string::npos) {
-				 saveString.replace(saveString.find(oldString), oldString.length(), newString);
+				 saveString.replace(p, oldString.length(), newString);
 				 p = saveString.find(oldString, p + newString.size());
 			 }
 			 saveFile << saveString << std::endl;
