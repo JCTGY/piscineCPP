@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 16:08:29 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/24 08:51:24 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/15 13:50:57 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ Fixed::Fixed(const float fixValue) : _fixValue(roundf(fixValue * (1 << _fixBits)
 
 Fixed & Fixed::operator = (const Fixed &inputClass) {
 
+	if (this == &inputClass)
+		return *this;
 	std::cout << "Assignment operator procesee" << std::endl;
 	this->_fixValue = inputClass.getRawBits();
 	return *this;
