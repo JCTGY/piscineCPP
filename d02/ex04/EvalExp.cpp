@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 14:53:02 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/24 20:15:15 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/15 18:18:15 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,30 @@ static float getNumber(char **pos) {
 int inputChecker(char *pos) {
 
 	int bracket = 0;
+	bool oper = false;
 	while (*pos) {
+		while (*pos ==  ' ') { pos++; }
+		if (*pos == '\0' && oper == false) { return 1; } 
 		if (!isdigit(*pos) && *pos != '+' && *pos != '-' && *pos != '/'
-				&& *pos != '*' && *pos != ' ' && *pos != '.' && *pos != '(' && *pos != ')')
+				&& *pos != '*' && *pos != ' ' && *pos != '.' && *pos != '(' && *pos != ')') {
+			std::cout << "Invalid character" << std::endl;
 			return 0;
+		}
+		if (!isdigit(*pos) && *pos != '(' && *pos != ')') {
+			if (oper == true) {
+				std::cout << "duplicate operator" << std::endl;
+				return 0;
+			}
+			oper = true;
+		} else if (isdigit(*pos))
+			oper = false;	
 		if (*pos == '(')
 			bracket++;
 		if (*pos == ')')
 			bracket--;
 		pos++;
 	}
-	if (bracket) { return 0; }
+	if (bracket || oper) { return 0; }
 	return 1;
 }
 
