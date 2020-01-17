@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 20:17:06 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/17 11:13:46 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/17 14:34:05 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,9 @@ void Character::equip(AMateria * m) {
 			_material[i] = m;
 	}
 }
+
 void Character::unequip(int idx) {
-	if (_material[idx] == NULL)
+	if (idx >= 4 || idx < 0)
 		return ;
-	if (idx == 3)
-		_material[idx] = NULL;
-	for (int i = 3; i >= 0; i--) {
-		AMateria * tmp = _material[i];
-		if (i == idx)
-			_material[idx] = NULL;
-	}
+	_material[idx] = NULL;
 }
