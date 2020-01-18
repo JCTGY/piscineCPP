@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 20:38:50 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 11:52:09 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:23:24 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,7 @@ class FragTrap : public ClapTrap {
 		~FragTrap(void);
 
 		// member function
-		void rangedAttack(std::string const & target);
-		void meleeAttack(std::string const & target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 		void vaulthunter_dot_exe(std::string const & target);
-
 		void lazyAttack(std::string const & target);
 		void wowoAttack(std::string const & target);
 		void latataAttack(std::string const & target);

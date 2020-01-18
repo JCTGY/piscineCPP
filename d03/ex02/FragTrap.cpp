@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 20:38:27 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 15:29:44 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:23:12 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,30 +62,6 @@ FragTrap::~FragTrap(void) {
 }
 
 // member function
-void FragTrap::rangedAttack(std::string const & target) {
-
-	std::cout << "[FragTrap] ";
-	ClapTrap::rangedAttack(target);
-}
-
-void FragTrap::meleeAttack(std::string const & target) {
-
-	std::cout << "[FragTrap] ";
-	ClapTrap::meleeAttack(target);
-}
-
-void FragTrap::takeDamage(unsigned int amount) {
-
-	std::cout << "[FragTrap] ";
-	ClapTrap::takeDamage(amount);
-}
-
-void FragTrap::beRepaired(unsigned int amount) {
-
-	std::cout << "[FragTrap] ";
-	ClapTrap::beRepaired(amount);
-}
-
 void FragTrap::vaulthunter_dot_exe(std::string const & target) {
 
 	std::cout << "[FragTrap] ";

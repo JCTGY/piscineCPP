@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:19:52 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 14:01:57 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:25:48 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,30 +62,6 @@ ScavTrap::~ScavTrap(void) {
 }
 
 // member function
-void ScavTrap::rangedAttack(std::string const & target) {
-
-	std::cout << "[ScavTrap] ";
-	ClapTrap::rangedAttack(target);
-}
-
-void ScavTrap::meleeAttack(std::string const & target) {
-
-	std::cout << "[ScavTrap] ";
-	ClapTrap::meleeAttack(target);
-}
-
-void ScavTrap::takeDamage(unsigned int amount) {
-
-	std::cout << "[ScavTrap] ";
-	ClapTrap::takeDamage(amount);
-}
-
-void ScavTrap::beRepaired(unsigned int amount) {
-
-	std::cout << "[ScavTrap] ";
-	ClapTrap::beRepaired(amount);
-}
-
 void ScavTrap::challengeNewcomer(std::string const & target) {
 
 	if (_energy >= ENERGY_ND) {

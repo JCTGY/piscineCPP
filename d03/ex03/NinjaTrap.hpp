@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 15:14:24 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 15:22:36 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:26:35 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,7 @@ class NinjaTrap : public ClapTrap {
 		~NinjaTrap(void);
 
 		// member function
-		void rangedAttack(std::string const & target);
-		void meleeAttack(std::string const & target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 		void ninjaShoebox(std::string const & target);
-
 		void lazyNinja(std::string const & target);
 		void wowoNinja(std::string const & target);
 		void latataNinja(std::string const & target);

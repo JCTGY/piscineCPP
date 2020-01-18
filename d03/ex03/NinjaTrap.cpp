@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 15:12:25 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 15:32:17 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:27:14 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,30 +62,6 @@ NinjaTrap::~NinjaTrap(void) {
 }
 
 // member function
-void NinjaTrap::rangedAttack(std::string const & target) {
-
-	std::cout << "[NinjaTrap] ";
-	ClapTrap::rangedAttack(target);
-}
-
-void NinjaTrap::meleeAttack(std::string const & target) {
-
-	std::cout << "[NinjaTrap] ";
-	ClapTrap::meleeAttack(target);
-}
-
-void NinjaTrap::takeDamage(unsigned int amount) {
-
-	std::cout << "[NinjaTrap] ";
-	ClapTrap::takeDamage(amount);
-}
-
-void NinjaTrap::beRepaired(unsigned int amount) {
-
-	std::cout << "[NinjaTrap] ";
-	ClapTrap::beRepaired(amount);
-}
-
 void NinjaTrap::ninjaShoebox(std::string const & target) {
 
 	std::cout << "[NinjaTrap] ";

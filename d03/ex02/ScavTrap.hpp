@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:15:15 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/25 13:33:55 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:24:02 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,7 @@ class ScavTrap : public ClapTrap {
 		~ScavTrap(void);
 
 		// member function
-		void rangedAttack(std::string const & target);
-		void meleeAttack(std::string const & target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 		void challengeNewcomer(std::string const & target);
-
 		void lazyChallenge(std::string const & target);
 		void wowoChallenge(std::string const & target);
 		void latataChallenge(std::string const & target);
