@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 18:19:55 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 23:25:49 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:58:03 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,9 @@ class Enemy {
 	private:
 		std::string _type;
 		int _hitPoint;
-	
-	protected:
-		Enemy(void);
-	
 	public:
 		// Default Canaonoical Class
+		Enemy(void);
 		Enemy(std::string type, int hitPoint);
 		Enemy(const Enemy & copy);
 		Enemy &operator = (const Enemy & inputClass);
@@ -37,7 +34,7 @@ class Enemy {
 		int getHitPoint(void) const;
 
 		//member function
-		virtual void takeDamage(int damage) = 0;
+		virtual void takeDamage(int damage);
 };
 
 #endif

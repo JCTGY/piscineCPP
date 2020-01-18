@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 17:36:19 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/13 20:51:48 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:45:15 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ AWeapon &AWeapon::operator = (const AWeapon & inputClass) {
 
 AWeapon::~AWeapon(void) {
 
-	std::cout << _name << " is destored" << std::endl;
+//	std::cout << _name << " is destored" << std::endl;
 }
 
 // Get function

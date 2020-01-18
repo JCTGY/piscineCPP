@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 14:30:31 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 21:36:44 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 11:00:22 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ int main(void)
 	std::cout << robert << jim << joe;
 	robert.polymorph(jim);
 	robert.polymorph(joe);
+
+	std::cout << "--------------------------------------------------" << std::endl;
+	lol.polymorph(jim);
+	lol.polymorph(joe);
+	std::cout << jim;
+	std::cout << joe;
 	return 0;
 }
 

@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 17:48:21 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/13 21:20:56 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 10:24:38 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,36 +19,10 @@
 int main(void)
 {
 	
-	PlasmaRifle tam =  PlasmaRifle();
-	std::cout << "Name: " << tam.getName() << std::endl;
-	std::cout << "Name: " << tam.getDamagePoint() << std::endl;
-	std::cout << "Name: " << tam.getActionCost() << std::endl;
-	tam.attack();
-
-	std::cout << "---------------------------------------------------------" << std::endl;
-	PowerFist gam = PowerFist();
-	std::cout << "Name: " << gam.getName() << std::endl;
-	std::cout << "Name: " << gam.getDamagePoint() << std::endl;
-	std::cout << "Name: " << gam.getActionCost() << std::endl;
-	gam.attack();
-	
-	std::cout << "---------------------------------------------------------" << std::endl;
-	SuperMutant eam = SuperMutant();
-	std::cout << "Type: " << eam.getType() << std::endl;
-	std::cout << "hitPoint: " << eam.getHitPoint() << std::endl;
-	eam.takeDamage(20);
-
-	std::cout << "---------------------------------------------------------" << std::endl;
-	RadScorpion eac = RadScorpion();
-	std::cout << "Type: " << eac.getType() << std::endl;
-	std::cout << "hitPoint: " << eac.getHitPoint() << std::endl;
-	eac.takeDamage(20);
-
-
-	std::cout << "---------------------------------------------------------" << std::endl;
 	Character* zaz = new Character("zaz");
 	std::cout << *zaz;
 	Enemy* b = new RadScorpion();
+	Enemy* c = new SuperMutant();
 	AWeapon* pr = new PlasmaRifle();
 	AWeapon* pf = new PowerFist();
 	zaz->equip(pr);
@@ -62,7 +36,16 @@ int main(void)
 	std::cout << *zaz;
 	zaz->attack(b);
 	std::cout << *zaz;
+	zaz->attack(c);
+	std::cout << *zaz;
 
 	std::cout << "---------------------------------------------------------" << std::endl;
+	Enemy *copyC = new SuperMutant(*(dynamic_cast<SuperMutant *>(c)));
+	zaz->attack(copyC);
+	delete copyC;
+	delete c;
+	delete pr;
+	delete pf;
+	delete zaz;
 	return 0;
 }

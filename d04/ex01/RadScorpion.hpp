@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 22:15:05 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 23:19:23 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:47:37 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ class RadScorpion : public Enemy {
 		RadScorpion(const RadScorpion & copy);
 		RadScorpion &operator = (const RadScorpion & inputClass);
 		~RadScorpion(void);
-
-		// member function
-		void takeDamage(int damage);
 };
 
 #endif

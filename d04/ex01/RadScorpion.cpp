@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 22:16:57 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/13 21:11:57 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:47:26 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,4 @@ RadScorpion &RadScorpion::operator = (const RadScorpion & inputClass) {
 RadScorpion::~RadScorpion(void) {
 
 	std::cout << "* SPROTCH *" << std::endl;
-}
-
-void RadScorpion::takeDamage(int damage) {
-
-	Enemy::takeDamage(damage);
 }

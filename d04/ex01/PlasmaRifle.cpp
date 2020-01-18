@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 17:56:05 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/13 21:06:44 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:42:55 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ PlasmaRifle &PlasmaRifle::operator = (const PlasmaRifle & inputClass) {
 
 PlasmaRifle::~PlasmaRifle(void) {
 
-	std::cout << AWeapon::getName() << " is destored" << std::endl;
+//	std::cout << AWeapon::getName() << " is destored" << std::endl;
 }
 
 // member fuction

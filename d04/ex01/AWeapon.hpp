@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 17:26:36 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/26 21:51:16 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 09:35:50 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class AWeapon {
 		AWeapon(std::string name, int damagePonit, int actionCost);
 		AWeapon(const AWeapon & copy);
 		AWeapon &operator = (const AWeapon &inputClass);
-		~AWeapon(void);
+		virtual ~AWeapon(void);
 
 		// Get function
 		std::string getName(void) const;
