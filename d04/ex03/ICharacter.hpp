@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 11:00:38 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/16 11:27:31 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 11:23:13 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <iostream>
 #include <string>
 #include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

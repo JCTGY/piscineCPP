@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 19:30:37 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/16 10:21:56 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 11:22:51 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 
 #include <string>
 #include <iostream>
+#include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {
 	private:
 		std::string _type;
 		unsigned int _xp;
-	
+	protected:
+		AMateria(void);
 	public:
 		AMateria(std::string const & type);
 		~AMateria(void);
@@ -30,7 +34,7 @@ class AMateria
 		unsigned int getXP(void) const;
 		void setXP(int xp);
 
-		virtual AMateria * clone(void) const = 0;
+		virtual AMateria* clone(void) const = 0;
 		virtual void use(ICharacter & target);
 };
 

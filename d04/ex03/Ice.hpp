@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 19:45:25 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/16 11:00:11 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/18 11:07:07 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class ice : public AMateria
+class Ice : public AMateria
 {
 	private:
 
