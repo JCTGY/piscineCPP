@@ -15,6 +15,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
@@ -100,5 +101,27 @@ int main(void)
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
+
+	std::cout << "--------------------------------------------------" << std::endl;
+	Intern myIntern;
+	Form *useIntern = nullptr;
+	useIntern = myIntern.makeForm("robotomy request", "lol");
+	try {
+		high.executeForm(*useIntern);
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
+		high.signForm(*useIntern);
+	} catch (std::exception & e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
+		high.executeForm(*useIntern);
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	
 	return 0;
 }
