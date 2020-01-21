@@ -6,7 +6,9 @@
 
 Intern::Intern(void) { }
 Intern::Intern(const Intern & copy) { *this = copy; }
-Intern &Intern::operator = (const Intern & inputClass) { return *this; }
+Intern &Intern::operator = (const Intern & inputClass) { 
+	(void)inputClass;
+	return *this; }
 Intern::~Intern(void) { }
 
 Form *Intern::makeForm(std::string name, std::string target) {
