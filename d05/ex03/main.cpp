@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 16:52:57 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/29 23:26:34 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/21 21:21:05 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int main(void)
 {
 	Bureaucrat low = Bureaucrat("lowest", 150);
-	Bureaucrat high = Bureaucrat("hiest", 1);
+	Bureaucrat high = Bureaucrat("highest", 1);
 
 	std::cout << low;
 	std::cout << high;
