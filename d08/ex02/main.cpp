@@ -6,12 +6,13 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 23:41:37 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/11/01 23:42:42 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/23 15:34:42 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Mutantstack.hpp"
-
+#include "mutantstack.hpp"
+#include <iostream>
+#include <string>
 
 int main(void)
 {
