@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 12:08:56 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/22 12:10:46 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/22 16:27:38 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 class Base
 {
-	virtual ~Base(void) { }
+	public:
+		virtual ~Base(void) { }
 };
 
 #endif

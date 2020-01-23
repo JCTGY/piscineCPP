@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 12:15:15 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/22 12:17:18 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/22 16:28:19 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 A::A(void) { }
 A::A(const A & copy) { *this = copy; }
-A &A::operator = (const A & inputClass) { return *this; }
+A &A::operator = (const A & ) { return *this; }
 A::~A(void) { }

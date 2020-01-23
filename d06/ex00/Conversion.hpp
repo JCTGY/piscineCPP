@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 18:43:28 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/10/30 21:10:15 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/22 21:26:01 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Conversion {
 	private:
 		std::string _input;
 		double _inputDouble;
-	
 	public:
 		// Default copein format
 		Conversion(void);
