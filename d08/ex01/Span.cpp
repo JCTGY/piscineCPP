@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 15:34:46 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/11/01 16:51:11 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/23 13:20:13 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,9 @@ unsigned long int Span::shortestSpan(void) {
 	std::vector<int> copy = this->_vectorInt;
 	sort(copy.begin(), copy.end());
 	return shortes;
+}
+
+unsigned long int Span::longestSpan(void) {
+
+
 }
