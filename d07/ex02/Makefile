@@ -6,11 +6,11 @@
 #    By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/30 19:50:43 by jchiang-          #+#    #+#              #
-#    Updated: 2019/10/31 20:13:50 by jchiang-         ###   ########.fr        #
+#    Updated: 2020/01/23 12:24:44 by jchiang-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = iter
+NAME = Array
 
 CFLAG = -std=c++98 -Wall -Wextra -Werror
 
