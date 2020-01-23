@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 16:39:03 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/23 13:20:00 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/23 14:46:22 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 int main(void)
 {
+	/*
 	Span span = Span(10005);
 	std::vector<int> vectorInt;
 	vectorInt.reserve(10000);
@@ -26,6 +27,7 @@ int main(void)
 	} catch (std::exception &e) {
 		std::cout << "add number failed" << std::endl;
 	}
+	*/
 
 	Span sp = Span(5);
 	sp.addNumber(5);
@@ -34,7 +36,7 @@ int main(void)
 	sp.addNumber(9);
 	sp.addNumber(11);
 	std::cout << sp.shortestSpan() << std::endl;
-	std::cout << sp.longestSpan() << std::endl;
+//	std::cout << sp.longestSpan() << std::endl;
 	
 	return 0;;
 }

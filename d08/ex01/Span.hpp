@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 14:49:04 by jchiang-          #+#    #+#             */
-/*   Updated: 2019/11/01 16:45:13 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/23 14:25:41 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <vector>
 #include <iterator>
+#include <iostream>
 
 class Span {
 
