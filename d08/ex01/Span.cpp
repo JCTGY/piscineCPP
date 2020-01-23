@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 15:34:46 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/23 14:48:30 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/23 15:30:12 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,25 +42,31 @@ void Span::addStackNumbers(std::vector<int> & rangeNumToAdd) {
 	_vectorInt.insert(_vectorInt.begin(), rangeNumToAdd.begin(), rangeNumToAdd.end());
 }
 
-unsigned long int Span::shortestSpan(void) {
+long Span::shortestSpan(void) {
 
 	if (_vectorInt.size() <= 1)
 		throw(std::exception());
-	unsigned long shortes = INT_MAX;
-	int intTmp = 0;
+	long shortes = LONG_MAX;
+	long intTmp = 0;
 	std::vector<int> copy = this->_vectorInt;
 	std::sort(copy.begin(), copy.end());
 	intTmp = *copy.begin();
 	for (std::vector<int>::iterator it = copy.begin(); it != copy.end(); ++it) {
-		if (((int)shortes > (*it - intTmp)) && it != copy.begin())
-			shortes = (*it - intTmp);
+		if ((shortes > (static_cast<long>(*it) - intTmp)) && it != copy.begin())
+			shortes = (static_cast<long>(*it) - intTmp);
 		intTmp = *it;
 	}
 	return shortes;
 }
 
-unsigned long int Span::longestSpan(void) {
+long Span::longestSpan(void) {
 
-	return 0;
+	long maxNum = INT_MIN;
+	long minNum = INT_MAX;
+	for (std::vector<int>::iterator it = _vectorInt.begin(); it != _vectorInt.end(); ++it) {
+		maxNum = (static_cast<long>(*it) > maxNum) ? *it : maxNum;
+		minNum = (static_cast<long>(*it) < minNum) ? *it : minNum;
+	}
+	return (maxNum - minNum);
 
 }

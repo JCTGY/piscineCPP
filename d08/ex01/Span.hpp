@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 14:49:04 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/23 14:25:41 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/23 15:13:44 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ class Span {
 		// member function
 		void addNumber(int numToAdd);
 		void addStackNumbers(std::vector<int> & rangeNumToAdd);
-		unsigned long int shortestSpan(void);
-		unsigned long int longestSpan(void);
+		long shortestSpan(void);
+		long longestSpan(void);
 };
 
 #endif
