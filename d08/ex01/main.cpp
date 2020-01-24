@@ -6,7 +6,7 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 16:39:03 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/23 15:30:39 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/23 19:12:18 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,17 @@ int main(void)
 	ft.addNumber(10);
 	std::cout << ft.shortestSpan() << std::endl;
 	std::cout << ft.longestSpan() << std::endl;
+
+
+	std::cout << std::endl << " ================== Try exception ===============" << std::endl;
+	Span ex = Span(3);
+	try {
+		ex.addNumber(5);
+		ex.addNumber(6);
+		ex.addNumber(7);
+		ex.addNumber(8);
+	} catch (std::exception &e) {
+		std::cout << "over load" << std::endl;
+	}
 	return 0;;
 }
