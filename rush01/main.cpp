@@ -6,14 +6,27 @@
 /*   By: jchiang- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 11:43:19 by jchiang-          #+#    #+#             */
-/*   Updated: 2020/01/24 16:32:29 by jchiang-         ###   ########.fr       */
+/*   Updated: 2020/01/24 21:36:32 by jchiang-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
 /* ----------------------------------------------------------------------------------------- */
+#include <sys/sysctl.h>
+void getMemory(void) {
+	int mib [] = { CTL_HW, HW_MEMSIZE };
+	int64_t value = 0;
+	size_t length = sizeof(value);
 
+	if(-1 == sysctl(mib, 2, &value, &length, NULL, 0)) {
+    	// An error occurred
+		std::cout << "Error: cannot get the Memory" << std::endl;
+	}
+	value /= 1024;
+	value /= 1024;
+	std::cout << "value: " << value << std::endl;
+}
 
 
 /* ----------------------------------------------------------------------------------------- */
@@ -158,5 +171,7 @@ int main(void)
 	std::cout << "Time: " << 1 + time->tm_hour << ": ";
 	std::cout << 1 + time->tm_min << ": ";
 	std::cout << 1 + time->tm_sec << std::endl;
+	
+	getMemory();
 	return 0;
 }
